@@ -1,46 +1,63 @@
 const authConfig = {
-  "siteName": "𝕯𝖗𝖊𝖆𝖒𝖘𝖕𝖆𝖗𝖐",  // 网站名称
-  "siteIcon": "cdn.jsdelivr.net/gh/james00000007/goIndex-theme-nexmoe@master/dist/img/icon_256x256.png?raw=true", //网站图标
+  "siteName": "𝕯𝖗𝖊𝖆𝖒𝖘𝖕𝖆𝖗𝖐",  // WebSite Name
+  "siteIcon": "https://www.jsdelivr.com/img/icon_256x256.png", //网站图标
   "version": "2.0.5", // 程序版本
-  "client_id": "",
-  "client_secret": "",
-  "refresh_token": "",  // 授权token
-  /**
-   * 设置要显示的多个云端硬盘；按格式添加多个
-   * [id]: 可以是 团队盘id、子文件夹id、或者"root"（代表个人盘根目录）；
-   * [name]: 显示的名称
-   * [user]: Basic Auth 的用户名
-   * [pass]: Basic Auth 的密码
-   * [protect_file_link]: Basic Auth 是否用于保护文件链接，默认值（不设置时）为 false，即不保护文件链接（方便 直链下载/外部播放 等）
-   * 每个盘的 Basic Auth 都可以单独设置。Basic Auth 默认保护该盘下所有文件夹/子文件夹路径
-   * 【注意】默认不保护文件链接，这样可以方便 直链下载/外部播放;
-   *       如果要保护文件链接，需要将 protect_file_link 设置为 true，此时如果要进行外部播放等操作，需要将 host 替换为 user:pass@host 的 形式
-   * 不需要 Basic Auth 的盘，保持 user 和 pass 同时为空即可。（直接不设置也可以）
-   * 【注意】对于id设置为为子文件夹id的盘将不支持搜索功能（不影响其他盘）。
-   */
-  "roots": [
-    {
+  "client_id": "", // Client ID
+  "client_secret": "", // Client Secret
+  "refresh_token": "", // Refresh Token
+  "folder_list_url": "", // Folder Id List(Only if you have any folders in roots) - Sample: https://cdn.jsdelivr.net/gh/cheems/goindex-extended@master/sample-files/sample-folder-id-list.txt
+  // Crypt Secret must be 32 characters long - Sample: "1234567890123456abcdefghIJKLMN!*" | don't use these characters (\,/,",') 
+  "crypt_secret": "", // Crypt Secret (Required)* This is used to encrypt file ids
+  "service_account": false, // true if you're using Service Account instead of user account
+  "files_list_page_size": 50,
+  "search_result_list_page_size": 50,
+  "enable_cors_file_down": false,
+  "enable_password_file_verify": true, // support for .password file
+    /**
+    * Set up multiple Drives to be displayed; add multiples by format
+    * [id]: It can be team folder id, subfolder id, or "root" (representing the root directory of personal disk);
+    * [name]: the displayed name
+    * [auth]: {'username_1' : 'password_1', 'username_2' : 'password_2'} 
+    * [protect_file_link]: Whether Basic Auth is used to protect the file link, the default value (when not set) is false, that is, the file link is not protected (convenient for straight chain download / external playback, etc.)
+    * Basic Auth of each folder can be set separately. Basic Auth protects all folders / subfolders in the disk by default
+    * [Note] By default, the file link is not protected, which can facilitate straight-chain download / external playback;
+    * If you want to protect the file link, you need to set protect_file_link to true. At this time, if you want to perform external playback and other operations, you need to replace host with user: pass @ host
+    * No need for Basic Auth folder, just keep user and pass empty at the same time. (No need to set it directly)
+    * [Note] For the folder whose id is set to the subfolder id, the search function will not be supported (it does not affect other disks).
+    */
+    "roots":[
+      {
       id: "root",
       name: "root",
       user: '',
       pass: "",
-      protect_file_link: true
-    },
-    {
-      id: "drive_id",
-      name: "团队盘1",
-      user: 'user1',
-      pass: "111",
-      protect_file_link: true
-    },
-    {
-      id: "folder_id",
-      name: "文件夹",
-      // 只设置密码、只设置用户名、同时设置用户名密码，都是可以的
-      user: '',
-      pass: "222",
       protect_file_link: false
-    }
+        // "auth": {"username":"password", "username1":"password1"} /* Remove double slash before "auth" to activate id password protection */
+      }
+      {
+      id: "root",
+      name: "root",
+      user: '',
+      pass: "",
+      protect_file_link: false
+        // "auth": {"username":"password", "username1":"password1"} /* Remove double slash before "auth" to activate id password protection */
+      }
+      {
+      id: "root",
+      name: "root",
+      user: '',
+      pass: "",
+      protect_file_link: false
+        // "auth": {"username":"password", "username1":"password1"} /* Remove double slash before "auth" to activate id password protection */
+      },    
+    // You can add more drives like above
+    /*{
+        id: "drive_id",
+        name: "Personal Drive II",
+        // To enable password protection, uncomment the below line
+        // auth: {'username_1' : 'password_1', 'username_2' : 'password_2'},
+        protect_file_link: false
+      }, */
   ],
   /**
    * 文件列表页面每页显示的数量。【推荐设置值为 100 到 1000 之间】；
@@ -75,13 +92,18 @@ const themeConfig = {
   // 主题 ( light:亮色 | dark:深色 )
   "theme": "dark", 
   // 主色
-  "main_color": "blue-grey",
+  "main_color": "teal",
+  // blue-grey | red | pink | purple | deep-purple | indigo | blue | light-blue | cyan | teal | green | light-green | lime | yellow | amber | orange | deep-orange | brown | grey
   // 强调色
-  "accent_color": "blue",
+  "accent_color": "purple",
+  // red | pink | purple | deep-purple | indigo | blue | light-blue | cyan | teal | green | light-green | lime | yellow | amber | orange | deep-orange
   // 头像
-  "avatar": "//cdn.jsdelivr.net/gh/5MayRain/ImageHosting/Blog/Website/avatar.png",
+  "avatar": "//cdn.jsdelivr.net/gh/james00000007/goIndex-theme-nexmoe@master/dist/img/Untitled.jpg",
   // 背景图片
   "bimg": "//cdn.jsdelivr.net/gh/james00000007/goIndex-theme-nexmoe@master/dist/img/go-data.png?raw=true",
+  //Optional default system language: en/zh-chs/zh-cht
+  "languages": "en",
+  "display_download": true,
   // 显示菜单
   "menu_show": true,
   // 菜单组
