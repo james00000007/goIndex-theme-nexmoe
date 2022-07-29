@@ -1,6 +1,6 @@
 const authConfig = {
-  "siteName": "GoIndex",  // 网站名称
-  "siteIcon": "//cdn.jsdelivr.net/gh/5MayRain/goIndex-theme-nexmoe@1.1.6/images/favicon.ico", //网站图标
+  "siteName": "𝕯𝖗𝖊𝖆𝖒𝖘𝖕𝖆𝖗𝖐",  // 网站名称
+  "siteIcon": "cdn.jsdelivr.net/gh/james00000007/goIndex-theme-nexmoe@master/dist/img/icon_256x256.png?raw=true", //网站图标
   "version": "2.0.5", // 程序版本
   "client_id": "",
   "client_secret": "",
@@ -73,7 +73,7 @@ const themeConfig = {
   // 仓库地址
   "url": "//cdn.jsdelivr.net/gh/5MayRain/goIndex-theme-nexmoe",
   // 主题 ( light:亮色 | dark:深色 )
-  "theme": "light", 
+  "theme": "dark", 
   // 主色
   "main_color": "blue-grey",
   // 强调色
@@ -81,14 +81,14 @@ const themeConfig = {
   // 头像
   "avatar": "//cdn.jsdelivr.net/gh/5MayRain/ImageHosting/Blog/Website/avatar.png",
   // 背景图片
-  "bimg": "//cdn.jsdelivr.net/gh/5MayRain/ImageHosting/Blog/Posts/2021/07/20/cover_01.jpg",
+  "bimg": "//cdn.jsdelivr.net/gh/james00000007/goIndex-theme-nexmoe@master/dist/img/go-data.png?raw=true",
   // 显示菜单
   "menu_show": true,
   // 菜单组
   "menus": [
     {
-      name: "Blog",
-      url: "//mrzgh.top"
+      name: "Github",
+      url: "//github.com/james00000007"
     },
     {
       name: "Log in",
