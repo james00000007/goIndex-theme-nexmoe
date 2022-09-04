@@ -55,16 +55,16 @@ themeConfig				//主题配置
   // 强调色
   "accent_color": "blue",
   // 头像
-  "avatar": "//cdn.jsdelivr.net/gh/5MayRain/ImageHosting/Blog/Website/avatar.png",
+  "avatar": "//cdn.jsdelivr.net/gh/james00000007/goIndex-theme-nexmoe@master/dist/img/Untitled.jpg",
   // 背景图片
-  "bimg": "//cdn.jsdelivr.net/gh/5MayRain/ImageHosting/Blog/Posts/2021/07/20/cover_01.jpg",
+  "bimg": "//cdn.jsdelivr.net/gh/james00000007/goIndex-theme-nexmoe@master/dist/img/go-data.png?raw=true",
   // 显示菜单
   "menu_show": true,
   // 菜单组
   "menus": [
     {
-      name: "Blog",
-      url: "//mrzgh.top"
+      name: "Github",
+      url: "//github.com/james00000007"
     },
     {
       name: "Log in",
