@@ -4,8 +4,8 @@
 
 
 ## 预览
-![light](https://raw.githubusercontent.com/5MayRain/goIndex-theme-nexmoe/master/screenshot/light.jpg)
-![dark](https://raw.githubusercontent.com/5MayRain/goIndex-theme-nexmoe/master/screenshot/dark.jpg)
+![light](https://raw.githubusercontent.com/james00000007/goIndex-theme-nexmoe/master/screenshot/light.jpg)
+![dark](https://raw.githubusercontent.com/james00000007/goIndex-theme-nexmoe/master/screenshot/dark.jpg)
 ![caption](https://raw.githubusercontent.com/5MayRain/goIndex-theme-nexmoe/master/screenshot/caption.jpg)
 ![thumbnails-dplayer](https://raw.githubusercontent.com/5MayRain/goIndex-theme-nexmoe/master/screenshot/thumbnails-dplayer.jpg)
 ![thumbnails-plyr](https://raw.githubusercontent.com/5MayRain/goIndex-theme-nexmoe/master/screenshot/thumbnails-plyr.jpg)
