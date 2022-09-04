@@ -1,25 +1,25 @@
 <!-- # GoIndex-theme-nexmoe -->
 
-主题基于 [yanzai/goindex](https://github.com/yanzai/goindex)
+Theme based on [yanzai/goindex](https://github.com/yanzai/goindex)
 
 
-## 预览
+## Preview
+## Light
 ![light](https://raw.githubusercontent.com/james00000007/goIndex-theme-nexmoe/master/screenshot/light.jpg)
+
+## Dark
 ![dark](https://raw.githubusercontent.com/james00000007/goIndex-theme-nexmoe/master/screenshot/dark.jpg)
-![caption](https://raw.githubusercontent.com/5MayRain/goIndex-theme-nexmoe/master/screenshot/caption.jpg)
-![thumbnails-dplayer](https://raw.githubusercontent.com/5MayRain/goIndex-theme-nexmoe/master/screenshot/thumbnails-dplayer.jpg)
-![thumbnails-plyr](https://raw.githubusercontent.com/5MayRain/goIndex-theme-nexmoe/master/screenshot/thumbnails-plyr.jpg)
 
 nexmoe:  [demo.zgh.workers.dev/](https://demo.zgh.workers.dev/)
 
-## 部署
-1. 打开下列任意网址
+## Deploy
+1. Open any of the following URLs
 - https://install.kenci.workers.dev/
 - https://goindex.glitch.me/
 - https://goindex-install.herokuapp.com/
 - https://goindex-quick-install.glitch.me/
-2. 授权并获取代码，把获取到的 `client_id` `client_secret` `refresh_token` ，填入模板
-3. 将代码部署到 [Cloudflare Workers](https://www.cloudflare.com/)
+2. Authorize and obtain the code, `client_id` `client_secret` `refresh_token` ，and fill in the obtained template into the template
+3. Deploy code to [Cloudflare Workers](https://www.cloudflare.com/)
 
 ## 自定义
 ### 模板
